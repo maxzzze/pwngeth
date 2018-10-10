@@ -28,7 +28,6 @@ def secureFunds(ip, address,amount, secure_addr, timeout=300):
     start = time.time()
     while time.time() < start + timeout:
         try:
-            print(address)
             web3.eth.sign(address, text='')
             return makeTransaction(
                 w3adr=web3,
